@@ -34,6 +34,12 @@
     tr:hover {
         background-color: #ddd;
     }
+
+    td.actions-col {
+        text-align: center;
+        padding: 5px;
+        /* Reduce padding for the actions column */
+    }
 </style>
 
 <body>
@@ -69,49 +75,55 @@
     </nav>
 
     <div class="container">
-        <h2>List Users</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>City</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Jill</td>
-                    <td>Smith</td>
-                    <td>50</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td>Adam</td>
-                    <td>Johnson</td>
-                    <td>67</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td>Bo</td>
-                    <td>Nilsson</td>
-                    <td>50</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td>Mike</td>
-                    <td>Ross</td>
-                    <td>35</td>
-                    <td>50</td>
-                </tr>
-            </tbody>
-        </table>
+        <%= JSON.stringify(listUsers) %>
+            <h2>List Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>City</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                        <td>50</td>
+                        <td class="actions-col">
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Adam</td>
+                        <td>Johnson</td>
+                        <td>67</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Bo</td>
+                        <td>Nilsson</td>
+                        <td>50</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Mike</td>
+                        <td>Ross</td>
+                        <td>35</td>
+                        <td>50</td>
+                    </tr>
+                </tbody>
+            </table>
     </div>
 
     <!-- Link Bootstrap JS and Popper.js -->
