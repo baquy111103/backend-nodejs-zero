@@ -12,6 +12,10 @@ const hostname = process.env.HOST_NAME
 
 const mysql = require('mysql2');
 
+//config req.body
+app.use(express.json())
+app.use(express.urlencoded({ extends: true }))
+
 //config template engine
 configViewEngine(app);
 
