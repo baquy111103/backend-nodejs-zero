@@ -75,55 +75,62 @@
     </nav>
 
     <div class="container">
-        <%= JSON.stringify(listUsers) %>
-            <h2>List Users</h2>
-            <table>
-                <thead>
+        <h2>List Users</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- <% for (let i=0; i < listUsers.length; i++) { %>
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>City</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Jill</td>
-                        <td>Smith</td>
-                        <td>50</td>
-                        <td>50</td>
+                        <td>
+                            <%= listUsers[i].id %>
+                        </td>
+                        <td>
+                            <%= listUsers[i].email %>
+                        </td>
+                        <td>
+                            <%= listUsers[i].name %>
+                        </td>
+                        <td>
+                            <%= listUsers[i].city %>
+                        </td>
                         <td class="actions-col">
                             <button class="btn btn-primary btn-sm">Edit</button>
                             <button class="btn btn-danger btn-sm">Delete</button>
                         </td>
                     </tr>
+                    <%} %> -->
+
+                <% listUsers.forEach(function(user){ %>
                     <tr>
-                        <td>Eve</td>
-                        <td>Jackson</td>
-                        <td>94</td>
-                        <td>50</td>
+                        <td>
+                            <%= user.id %>
+                        </td>
+                        <td>
+                            <%= user.email %>
+                        </td>
+                        <td>
+                            <%= user.name %>
+                        </td>
+                        <td>
+                            <%= user.city %>
+                        </td>
+                        <td class="actions-col">
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Adam</td>
-                        <td>Johnson</td>
-                        <td>67</td>
-                        <td>50</td>
-                    </tr>
-                    <tr>
-                        <td>Bo</td>
-                        <td>Nilsson</td>
-                        <td>50</td>
-                        <td>50</td>
-                    </tr>
-                    <tr>
-                        <td>Mike</td>
-                        <td>Ross</td>
-                        <td>35</td>
-                        <td>50</td>
-                    </tr>
-                </tbody>
-            </table>
+                    <% }); %>
+            </tbody>
+        </table>
     </div>
 
     <!-- Link Bootstrap JS and Popper.js -->
