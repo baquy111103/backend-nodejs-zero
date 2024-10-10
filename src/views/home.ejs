@@ -125,7 +125,9 @@
                         </td>
                         <td class="actions-col">
                             <a class="btn btn-primary btn-sm" href="/update/<%= user.id %>">Edit</a>
-                            <button class="btn btn-danger btn-sm">Delete</button>
+                            <form action="delete-user/<%= user.id %>" method="POST" class="d-inline">
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     <% }); %>

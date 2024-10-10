@@ -34,3 +34,9 @@
 .d-none {
     display: none;
 }
+
+.d-inline {
+    display: inline-block;
+    margin-left: 5px;
+    /* Tạo khoảng cách giữa Edit và Delete */
+}
